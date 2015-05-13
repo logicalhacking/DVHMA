@@ -11,6 +11,29 @@ e.g., using Apache Cordova or SAP Kapsel, securely. Currently, the
 main focus is to develop a deeper understanding of injection
 vulnerabilities that exploit the JavaScript to Java bridge.
 
+## Installation
+### Prerequisites
+We assume that the
+* Android SDK (https://developer.android.com/sdk/index.html) and 
+* Apache Cordova (https://cordova.apache.org/), version 3.5 or later
+are installed. Moreover, we assume a basic familiarity with the build
+system of Apache Cordova.
+
+### Building DVHMA
+#### Setting Environment Variables
+    export ANDROID_HOME=<Android SDK Installation Directory>
+    export PATH=$ANDROID_HOME/tools:$PATH
+    export PATH=$ANDROID_HOME/platform-tools:$PATH
+
+#### Compiling DVHMA
+    cd DVHMA-Featherweight
+    cordova plugin add ../plugins/DVHMA-Storage
+    cordova plugin add ../plugins/DVHMA-WebIntent 
+    cordova compile android
+
+#### Running DVHMA in an Emulator
+    cordova run android 
+
 ## Team Members
 This application is developed as part of the project ZertApps
 (Certified Security for Mobile Applications). ZertApps
