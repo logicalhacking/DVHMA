@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <plugin xmlns="http://cordova.apache.org/ns/plugins/1.0"
-           id="com.borismus.webintent"
+           id="de.zertapps.dvhma.plugins.webintent"
       version="1.0.0">
-    <name>WebIntent</name>
+    <name>DVHMA WebIntent</name>
     <description>Web intents for Cordova</description>
     <license>MIT</license>
     <keywords>cordova,webintent</keywords>
