@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://cordova.apache.org/ns/plugins/1.0"
+           id="com.borismus.webintent"
+      version="1.0.0">
+    <name>WebIntent</name>
+    <description>Web intents for Cordova</description>
+    <license>MIT</license>
+    <keywords>cordova,webintent</keywords>
+
+    <js-module src="www/webintent.js" name="WebIntent">
+        <clobbers target="WebIntent" />
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="WebIntent" >
+                <param name="android-package" value="com.borismus.webintent.WebIntent"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/WebIntent.java" target-dir="src/com/borismus/webintent" />
+    </platform>
+</plugin>
