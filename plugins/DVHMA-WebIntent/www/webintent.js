@@ -3,7 +3,7 @@
  * Copyright (c) Boris Smus 2010
  *
  */
- (function(cordova){
+(function(cordova) {
     var WebIntent = function() {
 
     };
@@ -17,28 +17,12 @@
     WebIntent.prototype.ACTION_CALL = "android.intent.action.CALL";
     WebIntent.prototype.ACTION_SENDTO = "android.intent.action.SENDTO";
 
-    WebIntent.prototype.startActivity = function(params, success, fail) {
-        return cordova.exec(function(args) {
-            success(args);
-        }, function(args) {
-            fail(args);
-        }, 'WebIntent', 'startActivity', [params]);
-    };
-
     WebIntent.prototype.hasExtra = function(params, success, fail) {
         return cordova.exec(function(args) {
             success(args);
         }, function(args) {
             fail(args);
         }, 'WebIntent', 'hasExtra', [params]);
-    };
-
-    WebIntent.prototype.getUri = function(success, fail) {
-        return cordova.exec(function(args) {
-            success(args);
-        }, function(args) {
-            fail(args);
-        }, 'WebIntent', 'getUri', []);
     };
 
     WebIntent.prototype.getExtra = function(params, success, fail) {
@@ -49,24 +33,8 @@
         }, 'WebIntent', 'getExtra', [params]);
     };
 
-
-    WebIntent.prototype.onNewIntent = function(callback) {
-        return cordova.exec(function(args) {
-            callback(args);
-        }, function(args) {
-        }, 'WebIntent', 'onNewIntent', []);
-    };
-
-    WebIntent.prototype.sendBroadcast = function(params, success, fail) {
-        return cordova.exec(function(args) {
-            success(args);
-        }, function(args) {
-            fail(args);
-        }, 'WebIntent', 'sendBroadcast', [params]);
-    };
-
     window.webintent = new WebIntent();
-    
+
     // backwards compatibility
     window.plugins = window.plugins || {};
     window.plugins.webintent = window.webintent;

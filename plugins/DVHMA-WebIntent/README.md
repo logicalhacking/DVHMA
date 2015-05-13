@@ -1,5 +1,5 @@
-# WebIntent Android Plugin for Cordova 3.X #
-By Boris Smus
+# Simplified WebIntent Android Plugin for Cordova 3.X #
+By Boris Smus, modified by Achim D. Brucker and Michael Herzberg
 
 Phonegap/Cordova 2.X version available at the [WebIntent](https://github.com/phonegap/phonegap-plugins/tree/master/Android/WebIntent) plugin site.
 
@@ -32,18 +32,6 @@ Here is an example of using webintent to open an Android .apk package, which the
 ## Using the plugin ##
 The plugin creates the object `window.plugins.webintent` with five methods:
 
-### startActivity ###
-Launches an Android intent. For example:
-
-
-    window.plugins.webintent.startActivity({
-        action: window.plugins.webintent.ACTION_VIEW,
-        url: 'geo:0,0?q=' + address},
-        function() {},
-        function() {alert('Failed to open URL via Android Intent')};
-    );
-
-
 ### hasExtra ###
 checks if this app was invoked with the specified extra. For example:
 
@@ -65,36 +53,6 @@ Gets the extra that this app was invoked with. For example:
             // There was no extra supplied.
         }
     );
-
-### getUri ###
-Gets the Uri the app was invoked with. For example:
-
-    window.plugins.webintent.getUri(function(url) {
-        if(url !== "") {
-            // url is the url the intent was launched with
-        }
-    });
-
-### onNewIntent ###
-Gets called when onNewIntent is called for the parent activity. Used in only certain launchModes. For example:
-
-    window.plugins.webintent.onNewIntent(function(url) {
-        if(url !== "") {
-            // url is the url that was passed to onNewIntent
-        }
-    });
-
-### sendBroadcast ###
-Sends a custom intent passing optional extras
-
-    window.plugins.webintent.sendBroadcast({
-                action: 'com.dummybroadcast.action.triggerthing',
-                extras: {
-                    'option': true
-                }
-            }, function() {
-            }, function() {
-    });
 
 ## Licence ##
 
