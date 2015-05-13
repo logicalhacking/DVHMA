@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="de.zertapps.dvhma.dvhma-featherweight" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>DVHMA</name>
+    <description>
+        Damn Vulnerable Hybrid Mobile App (DVHMA) is an hybrid mobile app (for Android) that intentionally contains vulnerabilities. 
+
+	This version of DVHMA, called Featherweight DVHMA, is designed to be a small as possible (e.g., avoiding large UI libraries such as Open UI5) while still beeing useful for security researchers.
+    </description>
+    <content src="index.html" />
+    <access origin="*" />
+</widget>

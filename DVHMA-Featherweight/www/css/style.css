@@ -1,0 +1,107 @@
+/* Copyright 2015 SAP SE
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+
+ *     http://www.apache.org/licenses/LICENSE-2.0
+
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+button {
+	background: #ECECEC;
+	border-radius: 15px;
+	padding: 5px 10px;
+	font-family: arial;
+	font-weight: bold;
+	color: #7f7f7f;
+	text-decoration: none;
+	text-shadow: 0px 1px 0px #fff;
+	border: 1px solid #a7a7a7;
+	margin: 1px auto;
+	width: 80px;
+	box-shadow: 0px 2px 1px white inset, 0px -2px 8px white, 0px 2px 5px
+		rgba(0, 0, 0, 0.1), 0px 8px 10px rgba(0, 0, 0, 0.1);
+	-webkit-transition: box-shadow 0.5s;
+}
+
+button i {
+	float: right;
+	margin-top: 2px;
+}
+
+button:hover {
+	box-shadow: 0px 2px 1px white inset, 0px -2px 20px white, 0px 2px 5px
+		rgba(0, 0, 0, 0.1), 0px 8px 10px rgba(0, 0, 0, 0.1);
+}
+
+button:active {
+	box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5) inset, 0px -2px 20px white,
+		0px 1px 5px rgba(0, 0, 0, 0.1), 0px 2px 10px rgba(0, 0, 0, 0.1);
+	background: -webkit-linear-gradient(top, #d1d1d1 0%, #ECECEC 100%);
+}
+
+table thead th {
+	border-bottom: 1px solid #999;
+	padding: 10px;
+}
+
+header {
+	height: 40px;
+	width: calc(100% - 16px);
+	position:fixed;
+}
+
+#items {
+	width: calc(100% - 16px);
+	overflow: auto;
+	position:fixed;
+	bottom: 68px;
+	top: 100px;
+}
+
+footer {
+	height: 60px;
+	position:fixed;
+	bottom: 8px;
+	width: calc(100% - 16px);
+}
+
+.editRemoveButtons {
+	display: table-cell;
+	vertical-align: middle;
+	height: 90px;
+	width: 90px;
+}
+
+p {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: left;
+	word-break: break-all;
+}
+
+.title {
+	display: table;
+	width: 100%;
+}
+
+#newItemButton {
+	width: 100%;
+}
+
+span {
+	display: table-cell;
+	vertical-align: middle;
+	width: 20px;
+	padding: 5px;
+}
+
+img {
+	height: 20px;
+}
