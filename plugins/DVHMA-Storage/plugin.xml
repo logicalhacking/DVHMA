@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://cordova.apache.org/ns/plugins/1.0" id="de.zertapps.dvhma.plugins.storage"
+version="1.0.0">
+<name>DVHMA-Storage</name>
+<description>DVHMA Storage Backend</description>
+<js-module src="www/DVHMA-Storage.js" name="DVHMA-Storage">
+	<clobbers target="DVHMA-Storage" />
+</js-module>
+
+<!-- android -->
+<platform name="android">
+	<config-file target="res/xml/config.xml" parent="/*">
+		<feature name="DVHMAStorage" >
+			<param name="android-package" value="de.zertapps.dvhma.plugins.storage.DVHMAStorage"/>
+		</feature>
+	</config-file>
+	<source-file src="src/android/DVHMAStorage.java" target-dir="src/de/zertapps/dvhma/plugins/storage/" />
+	<source-file src="src/android/DVHMAStorageDbHelper.java" target-dir="src/de/zertapps/dvhma/plugins/storage/" />
+</platform>
+</plugin>
