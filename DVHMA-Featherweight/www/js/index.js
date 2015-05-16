@@ -92,7 +92,7 @@ function reloadItems(items) {
 		var span = document.createElement("span");
 		var img = document.createElement("img");
 		img.src = "img/ic_action_expand.png";
-		img.onclick = onLoadContent;
+		img.addEventListener("click", onLoadContent);
 		span.appendChild(img);
 		headDiv.appendChild(span);
 		
@@ -105,12 +105,12 @@ function reloadItems(items) {
 		
 		var editButton = document.createElement("button");
 		editButton.innerHTML = "Edit";
-		editButton.onclick = onEditItem;
+		editButton.addEventListener("click", onEditItem);
 		buttonDiv.appendChild(editButton);
 		
 		var removeButton = document.createElement("button");
 		removeButton.innerHTML = "Remove";
-		removeButton.onclick = onRemoveItem;
+		removeButton.addEventListener("click", onRemoveItem);
 		buttonDiv.appendChild(removeButton);
 		headDiv.appendChild(buttonDiv);
 		
