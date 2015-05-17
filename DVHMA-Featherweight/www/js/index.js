@@ -24,10 +24,16 @@ function checkForExtraText() {
 				window.plugins.webintent.hasExtra(window.plugins.webintent.EXTRA_SUBJECT, function(hasSubjectExtra) {
 					if (hasSubjectExtra) {
 						window.plugins.webintent.getExtra(window.plugins.webintent.EXTRA_SUBJECT, function(title) {
-							window.todo.create([{"title" : title, "content" : content}], reloadItems, console.log);
+							var param = {};
+							param.title = title;
+							param.content = content;
+							window.todo.create([param], reloadItems, console.log);
 						}, console.log);
 					} else {
-						window.todo.create([{"title" : "NewTitle", "content" : content}], reloadItems, console.log);
+						var param = {};
+						param.title = "NewTitle";
+						param.content = content;
+						window.todo.create([param], reloadItems, console.log);
 					}
 				}, console.log);
 			}, console.log);
