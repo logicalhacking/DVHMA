@@ -17,34 +17,28 @@ function onDeviceReady() {
 	checkForExtraText();
 }
 
+function logError(error) {
+	console.log(error);
+}
+
 function checkForExtraText() {
-	window.plugins.webintent.hasExtra(window.plugins.webintent.EXTRA_TEXT, function(hasExtra) {
-		if (hasExtra) {
-			window.plugins.webintent.getExtra(window.plugins.webintent.EXTRA_TEXT, function(content) {
-				window.plugins.webintent.hasExtra(window.plugins.webintent.EXTRA_SUBJECT, function(hasSubjectExtra) {
-					if (hasSubjectExtra) {
-						window.plugins.webintent.getExtra(window.plugins.webintent.EXTRA_SUBJECT, function(title) {
-							var param = {};
-							param.title = title;
-							param.content = content;
-							window.todo.create([param], reloadItems, console.log);
-						}, console.log);
-					} else {
-						var param = {};
-						param.title = "NewTitle";
-						param.content = content;
-						window.todo.create([param], reloadItems, console.log);
-					}
-				}, console.log);
-			}, console.log);
-		} else {
-			window.todo.get(reloadItems, console.log);
-		}
-	}, console.log);
+	window.webintent(window.webintent.EXTRA_TEXT, function(content) {
+		window.webintent(window.webintent.EXTRA_SUBJECT, function(title) {
+			var param = {};
+			param.title = title;
+			param.content = content;
+			window.todo.create([param], reloadItems, logError);
+		}, function(error) {
+			var param = {};
+			param.title = "NewTitle";
+			param.content = content;
+			window.todo.create([param], reloadItems, logError);
+		});
+	});
 }
 
 function onRemoveItem(e) {
-	window.todo.delete([e.target.parentNode.parentNode.dataset.id], reloadItems, console.log);
+	window.todo.delete([e.target.parentNode.parentNode.dataset.id], reloadItems, logError);
 }
 
 function onEditItem(e) {
@@ -60,8 +54,8 @@ function onEditItem(e) {
 		if (newContent == null) {
 			newContent = oldContent;
 		}
-		window.todo.edit([id, {"title" : newTitle, "content" : newContent}], reloadItems, console.log);
-	}, alert);
+		window.todo.edit([id, {"title" : newTitle, "content" : newContent}], reloadItems, logError);
+	}, logError);
 }
 
 function onLoadContent(e) {
@@ -76,7 +70,7 @@ function onLoadContent(e) {
 			contentDiv.parentNode.getElementsByTagName("img")[0].src = "img/ic_action_collapse.png";
 			contentDiv.innerHTML = items[id]["content"];
 			contentDiv.dataset.loaded = true;
-		}, console.log);
+		}, logError);
 	}
 }
 
@@ -132,7 +126,7 @@ function reloadItems(items) {
 }
 
 function onNewItemClick() {
-	window.todo.create([{"title" : "NewTitle", "content" : "New Content"}], reloadItems, console.log);
+	window.todo.create([{"title" : "NewTitle", "content" : "New Content"}], reloadItems, logError);
 }
 
 document.addEventListener("deviceready", onDeviceReady);
