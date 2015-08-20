@@ -34,6 +34,8 @@ function checkForExtraText() {
 			param.content = content;
 			window.todo.create([param], reloadItems, logError);
 		});
+	}, function(error) {
+		window.todo.get(reloadItems, logError);
 	});
 }
 
