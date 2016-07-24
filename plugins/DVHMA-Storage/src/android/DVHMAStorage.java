@@ -57,6 +57,10 @@ public class DVHMAStorage extends CordovaPlugin {
             return false;
         }
     }
+    private void get(CordovaArgs args, CallbackContext callbackContext) {
+        JSONArray result = queryDatabase();
+        callbackContext.success(result);
+    }
 
     private void edit(CordovaArgs args, CallbackContext callbackContext) {
         int index;
@@ -77,10 +81,11 @@ public class DVHMAStorage extends CordovaPlugin {
         db.execSQL("UPDATE " + DVHMAStorageDbHelper.TABLE_NAME + " SET title='" + newTitle + "',content='" + newContent + "' WHERE id=" + c.getInt(c.getColumnIndex("id")) + ";");
         db.close();
 
-        get(null, callbackContext);
+        JSONArray result = queryDatabase();
+        callbackContext.success(result);
     }
 
-    private void get(CordovaArgs args, CallbackContext callbackContext) {
+    private JSONArray queryDatabase() {
         SQLiteDatabase db = mDbHelper.getWritableDatabase();
         JSONArray array = new JSONArray();
         Cursor c = db.rawQuery("SELECT * FROM " + DVHMAStorageDbHelper.TABLE_NAME + ";", null);
@@ -98,7 +103,7 @@ public class DVHMAStorage extends CordovaPlugin {
         }
         c.close();
         db.close();
-        callbackContext.success(array);
+        return array;
     }
 
     private void delete(CordovaArgs args, CallbackContext callbackContext) {
@@ -117,7 +122,8 @@ public class DVHMAStorage extends CordovaPlugin {
         c.close();
         db.close();
 
-        get(null, callbackContext);
+        JSONArray result = queryDatabase();
+        callbackContext.success(result);
     }
 
     private void create(CordovaArgs args, CallbackContext callbackContext) {
@@ -135,6 +141,7 @@ public class DVHMAStorage extends CordovaPlugin {
         db.execSQL("INSERT INTO " + DVHMAStorageDbHelper.TABLE_NAME + " (title,content) VALUES('" + newTitle + "','" + newContent + "');");
         db.close();
 
-        get(null, callbackContext);
+        JSONArray result = queryDatabase();
+        callbackContext.success(result);
     }
 }

@@ -9,7 +9,7 @@
     <keywords>cordova,webintent</keywords>
 
     <js-module src="www/webintent.js" name="WebIntent">
-        <clobbers target="WebIntent" />
+        <clobbers target="window.webintent" />
     </js-module>
 
     <!-- android -->

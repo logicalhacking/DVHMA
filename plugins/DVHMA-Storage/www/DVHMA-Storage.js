@@ -12,46 +12,18 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+module.exports.create = function(params, success, fail) {
+	return cordova.exec(success, fail, 'DVHMAStorage', 'create', params);
+}
 
-(function(cordova){
-    var DVHMAStorage = function() {
+module.exports.get = function(success, fail) {
+	return cordova.exec(success, fail, 'DVHMAStorage', 'get', []);
+}
 
-    };
-	
-	DVHMAStorage.prototype.create = function(params, success, fail) {
-		return cordova.exec(function(args) {
-			success(args);
-		}, function(args) {
-			fail(args);
-		}, 'DVHMAStorage', 'create', params);
-	}
-	
-	DVHMAStorage.prototype.get = function(success, fail) {
-		return cordova.exec(function(args) {
-			success(args);
-		}, function(args) {
-			fail(args);
-		}, 'DVHMAStorage', 'get', []);
-	}
-	DVHMAStorage.prototype.delete = function(params, success, fail) {
-		return cordova.exec(function(args) {
-			success(args);
-		}, function(args) {
-			fail(args);
-		}, 'DVHMAStorage', 'delete', params);
-	}
-	
-	DVHMAStorage.prototype.edit = function(params, success, fail) {
-		return cordova.exec(function(args) {
-			success(args);
-		}, function(args) {
-			fail(args);
-		}, 'DVHMAStorage', 'edit', params);
-	}
+module.exports.delete = function(params, success, fail) {
+	return cordova.exec(success, fail, 'DVHMAStorage', 'delete', params);
+}
 
-    window.todo = new DVHMAStorage();
-    
-    // backwards compatibility
-    window.plugins = window.plugins || {};
-    window.plugins.webintent = window.webintent;
-})(window.PhoneGap || window.Cordova || window.cordova);
+module.exports.edit = function(params, success, fail) {
+	return cordova.exec(success, fail, 'DVHMAStorage', 'edit', params);
+}
