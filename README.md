@@ -42,8 +42,8 @@ This application is developed as part of the project ZertApps
 (http://www.zertapps.de) is a collaborative research project funded by
 the German Ministry for Research and Education. The core developers of
 DVHMA are:
-* Achim D. Brucker <achim.brucker@sap.com>
-* Michael Herzberg <michael.herzberg@sap.com>
+* [Achim D. Brucker](http://www.brucker.ch/)
+* [Michael Herzberg](http://www.dcs.shef.ac.uk/cgi-bin/makeperson?M.Herzberg)
 
 ## License
 This project is under the Apache 2.0 License. 
