@@ -37,11 +37,14 @@ Apache Cordova.
     cordova run android 
 
 ## Team Members
-This application is developed as part of the project ZertApps
-(Certified Security for Mobile Applications). ZertApps
-(http://www.zertapps.de) is a collaborative research project funded by
-the German Ministry for Research and Education. The core developers of
-DVHMA are:
+The development of this application started as part of the project 
+[ZertApps](http://www.zertapps.de). ZertApps was a collaborative 
+research project funded by the German Ministry for Research and 
+Education. It is now developed and maintained by the [Software 
+Assurance & Security Research Team](https://logicalhacking.com) 
+at The University of Sheffield, UK. 
+
+The core developers of DVHMA are:
 * [Achim D. Brucker](http://www.brucker.ch/)
 * [Michael Herzberg](http://www.dcs.shef.ac.uk/cgi-bin/makeperson?M.Herzberg)
 
