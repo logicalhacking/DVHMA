@@ -29,6 +29,7 @@ Apache Cordova.
 
 #### Compiling DVHMA
     cd DVHMA-Featherweight
+    cordova platform add android
     cordova plugin add ../plugins/DVHMA-Storage
     cordova plugin add ../plugins/DVHMA-WebIntent 
     cordova compile android
