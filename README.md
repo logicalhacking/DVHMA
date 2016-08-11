@@ -15,8 +15,8 @@ vulnerabilities that exploit the JavaScript to Java bridge.
 ### Prerequisites
 We assume that the
 * Android SDK (https://developer.android.com/sdk/index.html) and 
-* Apache Cordova (https://cordova.apache.org/), version 3.5 or later
-are installed. 
+* Apache Cordova (https://cordova.apache.org/), version 6.3.0 or later
+  are installed. 
 
 Moreover, we assume a basic familiarity with the build system of 
 Apache Cordova.
