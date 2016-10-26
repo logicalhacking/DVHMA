@@ -7,9 +7,11 @@ developing hybrid mobile apps securely.
 
 ## Motivation and Scope
 This app is developed to study pitfalls in developing hybrid apps,
-e.g., using Apache Cordova or SAP Kapsel, securely. Currently, the
-main focus is to develop a deeper understanding of injection
-vulnerabilities that exploit the JavaScript to Java bridge.
+e.g., using [Apache Cordova](https://cordova.apache.org/) or
+[SAP Kapsel](https://blogs.sap.com/2013/10/21/an-introduction-to-smp-kapsel/),
+securely. Currently, the main focus is to develop a deeper
+understanding of injection vulnerabilities that exploit the JavaScript
+to Java bridge.
 
 ## Installation
 ### Prerequisites
