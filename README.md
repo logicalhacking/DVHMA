@@ -53,3 +53,13 @@ The core developers of DVHMA are:
 
 ## License
 This project is under the Apache 2.0 License. 
+
+## Publications
+* Achim D. Brucker and Michael Herzberg. [On the Static Analysis of
+  Hybrid Mobile Apps: A Report on the State of Apache Cordova
+  Nation.](https://www.brucker.ch/bibliography/download/2016/brucker.ea-cordova-security-2016.pdf)
+  In International Symposium on Engineering Secure Software
+  and Systems (ESSoS). Lecture Notes in Computer Science (9639), pages
+  72-88, Springer-Verlag, 2016.
+  https://www.brucker.ch/bibliography/abstract/brucker.ea-cordova-security-2016
+  doi: [10.1007/978-3-319-30806-7_5](http://dx.doi.org/10.1007/978-3-319-30806-7_5)
