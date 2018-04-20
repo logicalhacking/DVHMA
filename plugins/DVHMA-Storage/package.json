@@ -1,0 +1,17 @@
+{
+  "name": "de.zertapps.dvhma.plugins.storage",
+  "version": "1.0.0",
+  "description": "DVHMA Storage Backend",
+  "cordova": {
+    "id": "de.zertapps.dvhma.plugins.storage",
+    "platforms": [
+      "android"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "",
+  "license": "Apache 2.0"
+}
