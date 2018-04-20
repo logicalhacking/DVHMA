@@ -1,0 +1,19 @@
+{
+  "name": "de.zertapps.dvhma.plugins.webintent",
+  "version": "1.0.0",
+  "description": "Web intents for Cordova",
+  "cordova": {
+    "id": "de.zertapps.dvhma.plugins.webintent",
+    "platforms": [
+      "android"
+    ]
+  },
+  "keywords": [
+    "cordova",
+    "webintent",
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "",
+  "license": "MIT"
+}
