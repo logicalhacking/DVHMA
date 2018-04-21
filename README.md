@@ -17,8 +17,8 @@ to Java bridge.
 ### Prerequisites
 We assume that the
 * Android SDK (https://developer.android.com/sdk/index.html) and 
-* Apache Cordova (https://cordova.apache.org/), version 6.3.0 or later
-  are installed. 
+* Apache Cordova (https://cordova.apache.org/), version 8.0.0 (later
+  versions might work) 
 
 Moreover, we assume a basic familiarity with the build system of 
 Apache Cordova.
