@@ -65,6 +65,8 @@ The core developers of DVHMA are:
 
 This project is under the Apache 2.0 License. 
 
+SPDX-License-Identifier: Apache-2.0
+
 ## Publications
 
 * Achim D. Brucker and Michael Herzberg. [On the Static Analysis of
