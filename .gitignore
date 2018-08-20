@@ -25,3 +25,7 @@ proguard/
 
 # Log Files
 *.log
+
+# Node/NPM
+DVHMA-Featherweight/node_modules/
+DVHMA-Featherweight/package-lock.json
