@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="de.zertapps.dvhma.featherweight" version="1.0.0-6.3.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Featherweight DVHMA</name>
-    <author href="https://logicalhacking.com"></author>
+    <author href="https://logicalhacking.com" />
     <description>
         Damn Vulnerable Hybrid Mobile App (DVHMA) is an hybrid mobile app (for Android) that intentionally contains vulnerabilities. 
 
@@ -9,4 +9,7 @@
     </description>
     <content src="index.html" />
     <access origin="*" />
+    <plugin name="de.zertapps.dvhma.plugins.storage" spec="../plugins/DVHMA-Storage" />
+    <plugin name="de.zertapps.dvhma.plugins.webintent" spec="../plugins/DVHMA-WebIntent" />
+    <engine name="android" spec="~7.0.0" />
 </widget>
